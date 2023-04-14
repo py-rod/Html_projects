@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --Gradient: hsl(6, 100%, 80%);
+    --gradient:hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --Raleway: 'Raleway', sans-serif;
+}
+
+
+main{
+    background-image: url("../assets/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+    min-height: 100vh;
+    padding: 100px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    position: relative;
+    z-index: 100;
+    align-items: center;
+    max-width: 1600px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card__target1{
+    background-color: var(--Dark-Blue);
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    height: 200px;
+    padding: 40px;
+    border-radius: 15px 100px 15px 15px;
+}
+
+.card__container__logo{
+    margin-bottom: 20px;
+}
+
+.card__container__items{
+    display: flex;
+    gap: 0 15px;
+}
+
+.card__container__items > div{
+    background-color: var(--Very-Dark-Blue);
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+/* TARJETA 2 */
+.card__target2{
+    width: 335px;
+    background-color: var(--Dark-Blue);
+    border-radius: 15px;
+    padding: 40px;
+    color: white;
+    position: relative;
+    z-index: 50;
+}
+
+.card__paragraf{
+    font-size: .9rem;
+    font-family: var(--Raleway);
+    color:hsl(0, 0%, 75%);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card__paragraf > span{
+    color: white;
+    font-weight: bold;
+}
+
+
+/* PARTE DE LA BARRA */
+
+
+.card__container__bar{
+    height: 20px;
+    width: 100%;
+    padding: 2px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.card__bar{
+    background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+    height: 100%;
+    width: 76%;
+    border-radius: 40px;
+    padding: 3px;
+    display: flex;
+    justify-content: right;
+}
+
+
+.card__bar > div{
+    background-color: white;
+    height: 100%;
+    width: 10px;
+    border-radius: 50%;
+}
+
+
+.card__container__size{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card__container__size > span{
+    font-size: .8rem;
+    font-family: var(--Raleway);
+}
+
+
+.card__container_master__number{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    left: 0px;
+}
+
+
+.card__container__number{
+    width: 200px;
+    background-color: white;
+    padding: 15px 10px;
+    color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    font-size: 2rem;
+    font-family: var(--Raleway);
+    font-weight: bold;
+}
+
+
+.card__container__number > span {
+    font-size: 1.4rem;
+    color: var(--Grayish-Blue);
+}
+
+
+
+
+
+@media (min-width:900px) {
+
+    main{
+        background-image: url("../assets/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-size: 100% 50%, cover;
+        background-position: bottom ;
+        background-color: var(--Very-Dark-Blue);
+        padding: 100px 100px;
+    }
+    .card{
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+        align-items:flex-end;
+    }
+
+
+    /* PARTE DE LA TARJETA */
+
+    .card__target2{
+        width: 50%;
+
+    }
+
+    .card__container_master__number{
+        position: absolute;
+        top: -30%;
+        left: 0%;
+        padding: 15px 30px;
+        color: var(--Very-Dark-Blue);
+        border-radius: 10px 10px 0 ;
+        font-size: 2rem;
+        font-family: var(--Raleway);
+        font-weight: bold;
+        justify-content: right ;
+    }
+
+
+    .card__container__number{
+        width: 180px;
+        background-color: white;
+        padding: 15px 10px;
+        color: var(--Very-Dark-Blue);
+        border-radius: 10px;
+        font-size: 2rem;
+        font-family: var(--Raleway);
+        font-weight: bold;
+    }
+}
+
+
+
+
+@media (max-width:365px) {
+    .card__target1{
+        width: 100%;
+    }
+
+
+    .card__target2{
+        width: 100%;
+    }
+
+
+    .card__container_master__number{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 160px;
+        left: 0px;
+    }
+}
+
+
+
+@media (max-width:290px) {
+    .card__target1{
+    padding: 40px 20px;
+    }
+
+
+    .card__container__items > div{
+        padding:5px;
+       
+    }
+}

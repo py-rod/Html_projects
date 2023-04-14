@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d3742;
+}
+
+:root {
+  --Hind: "Hind", sans-serif;
+  --Creepster: "Creepster", cursive;
+}
+
+main {
+  min-height: 85vh;
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #10101081;
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 12, 12, 0.61);
+  backdrop-filter: blur(0px);
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.navbar {
+  max-width: 1900px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.header-logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.9rem;
+  font-family: var(--Creepster);
+  filter: drop-shadow(0px 5px 0px rgb(76, 211, 71));
+}
+
+.header-logo:hover {
+  color: white;
+}
+
+.content-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header-shop {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.header-shop > svg {
+  fill: white;
+  transition: 0.4s;
+}
+
+.header-shop > svg:hover {
+  fill: rgb(127, 255, 123);
+}
+
+.buttom-menu {
+  background-color: rgb(76, 211, 71);
+}
+
+.buttom-menu:hover {
+  background-color: rgb(0, 172, 0);
+}
+
+.offcanvas {
+  background-color: rgba(0, 0, 0, 0.534);
+  border-bottom: 1px solid rgb(62, 255, 62);
+}
+
+.offcanvas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 12, 12, 0.61);
+  backdrop-filter: blur(0px);
+  filter: blur(3px);
+
+  z-index: -1;
+}
+
+.buttom-close {
+  background-color: white;
+}
+
+.offcanvas-title {
+  font-size: 1.7rem;
+  font-family: var(--Creepster);
+  margin: 0 auto;
+  color: white;
+  filter: drop-shadow(0px 5px 0px rgb(76, 211, 71));
+}
+
+.header-content-links > a {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px 0;
+  --clippy: polygon(44% 37%, 45% 37%, 45% 36%, 44% 38%);
+}
+
+.header-content-links > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: greenyellow;
+  clip-path: var(--clippy);
+  transition: 0.5s;
+}
+
+.header-content-links > a:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.section-1 > h5{
+  color: white;
+  font-size: 1.4rem;
+}
+
+.section-1 > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.section-1 > div > a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 10px;
+  transition: .3s;
+}
+
+
+.card:hover{
+  box-shadow: 0 0 15px rgb(62, 255, 62);
+  transform: scale(1.1);
+}
+
+
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 12, 12, 0.61);
+  backdrop-filter: blur(0px);
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.card > img {
+  border-radius: 6px;
+}

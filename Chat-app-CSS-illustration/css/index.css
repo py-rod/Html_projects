@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --rubik:'Rubik', sans-serif;
+
+    /* #### Text */
+
+    /* (sub-heading at the top of the app UI) */
+    --Pale-Violet : hsl(276, 100%, 81%);
+    /*  (chat on the left) */
+   --Moderate--Violet: hsl(276, 55%, 52%);
+   /*  (chat on the right) */
+   --Desaturated--Dark--Violet: hsl(271, 15%, 43%);
+   /*  (placeholder text) */
+   --Grayish--Blue: hsl(206, 6%, 79%);
+   /*  (main heading) */
+   --Very--Dark--Desaturated--Violet: hsl(271, 36%, 24%);
+   /*  (paragraph) */
+   --Dark--Grayish--Violet: hsl(270, 7%, 64%);
+
+    /* #### Gradients
+
+    These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+   --Light--Magenta: hsl(293, 100%, 63%);
+   --Light--Violet: hsl(264, 100%, 61%);
+
+    /* ### Secondary */
+
+   --White: hsl(0, 0%, 100%);
+   /*  (app background) */
+   --Light--Grayish--Violet: hsl(270, 20%, 96%);
+   /*  (submit button background) */
+   --Very--Dark--Desaturated--Violet: hsl(271, 36%, 24%);
+   /* (radio button outline) */
+   --Very--Light--Magenta : hsl(289, 100%, 72%);
+}
+
+
+
+body{
+    background-color: var(--Light--Grayish--Violet);
+}
+
+
+main{
+    position: relative;
+    z-index: 2000;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1366px;
+    margin:  0 auto;
+}
+
+
+
+/* PARTE TRASERA DEL SECTION */
+.card__object{
+    position: absolute;
+    z-index: 1;
+    background-image: linear-gradient(to top, var(--Light--Violet) 0%, var(--Light--Magenta) 100%);
+    height: 95%;
+    width: 25rem;
+    max-height: 50.75rem;
+    max-width: 43.75rem;
+    border-radius:  0 0 1000px 900px;
+}
+
+
+/* SECTION  */
+.card{
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    padding: 6.25rem 0;
+    font-family: var(--rubik);
+    max-width: 85.375rem;
+    display: flex;
+}
+
+/* CONTENEDOR MAESTRO DE MOVIL */
+.card__content__movil{
+    position: relative;
+    width: 18.75rem;
+    border:0.6875rem solid white;
+    left: 20rem;
+    border-radius: 1.875rem;
+    background-color: var(--White);
+}
+
+
+/* CONTENEDOR DEL HEADER DEL TELEFONO */
+.card__content__header__movil{
+    background-image: linear-gradient(to right, var(--Light--Violet) 0%, var(--Light--Magenta) 100%);
+    border-radius: 20px 20px 5px 5px;
+    width: 100%;
+}
+
+/* NOTCH */
+.card__notch{
+    margin:  0 auto;
+    width: 50%;
+    height: 1.25rem;
+    background-color: white;
+    border-radius:  5px 5px 80px 80px;
+}
+
+
+/* CONTENEDOR DE TODOS LOS ITEMS DEL HEADER DE TEXTO  */
+.card__content__items__header{
+    display: flex;
+    border-radius: 0.625rem;
+    padding:10px 15px;
+    align-items: center;
+    margin-top: 0.625rem;
+}
+
+/* CONTENEDOR MAESTRO DE PICTURE PROFILE */
+.card__content__picture{
+    width: 100%;
+    padding: 0 0.625rem;
+    display: flex;
+    align-items: center;
+}
+
+/* CONTENEDOR DE TEXTO HEADER, ESTADO Y NOMBRE  */
+.card__content__text__header{
+    color: white;
+    margin-left: 0.9375rem;
+}
+
+/* NOMBRE1 */
+.card__name{
+    font-size: .8rem;
+    margin-bottom: 0.3125rem;
+}
+
+
+/* ESTADO */
+.card__paragraf__header{
+    font-size: .66rem;
+    color: var(--Grayish--Blue);
+}
+
+
+/* IMAGEN PROFILE */
+.card__content__img > img{
+    width: 2.5rem;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+
+
+
+/* SEGUNDA PARTE DEL TELEFONO */
+
+/* PRIMEROS TEXTOS */
+.card__content__conversation{
+    background-color: var(--Light--Grayish--Violet);
+    font-size: .7rem;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 5px 5px 20px 20px;
+}
+
+
+
+.card__content__text__part1{
+    width: 100%;
+    margin-bottom: 1.5625rem;
+}
+
+.card__text1{
+    color: var(--Moderate--Violet);
+    background-color: hsl(272, 66%, 94%);
+    margin-bottom: 0.625rem;
+    width: 60%;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+
+.card__text1__2{
+    width: 70%;
+}
+
+
+
+
+
+
+/* IMAGENES PERROS */
+
+.card__content__img__messages{
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.card__content__img__dogs{
+    display: flex;
+    justify-content: right;
+    gap:0.625rem;
+}
+
+
+.card__content__img__dogs > img{
+    width: 2.5rem;
+    border-radius: 0.625rem;
+    display: block;
+}
+
+
+
+
+/* SEGUNDA PARTE DE LOS MENSAJES */
+
+/* contenedor maestro */
+.card__content__text__part2{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 0.9375rem;
+}
+
+
+/* SUBCONTENT DE LOS SEGUNDOS TEXTOS */
+.card__subcontent__text__part2{
+    width: 11.875rem;
+}
+
+.card__text2{
+    border-radius: 0.5rem;
+    background-color: white;
+    margin-bottom: 0.625rem;
+    padding: 0.625rem;
+    color: var(--Desaturated--Dark--Violet);
+}
+
+
+.card__text2__2{
+    text-align: right;
+    width:fit-content;
+    margin-left: 4.6875rem;
+}
+
+
+
+
+
+/* TERCERA PARTE DE LOS MENSAJES */
+
+.card__content__text__part3{
+    width: 100%;
+    margin-bottom: 0.9375rem;
+}
+
+.card__text3{
+    background-color: hsl(272, 66%, 94%);
+    color: var(--Moderate--Violet);
+    width: fit-content;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+}
+
+
+
+
+/* PARTE DE LOS PRECIOS */
+
+
+.card__subcontent__ofert{
+    background-image: linear-gradient(to left, var(--Light--Violet) 0%, var(--Light--Magenta) 100%);
+    display: flex;
+    padding: 0.625rem 0.625rem;
+    margin-bottom: 0.625rem;
+    color: white;
+    align-items: center;
+    border-radius: 0.625rem;
+}
+
+.card__time{
+    margin-left: 0.9375rem;
+    width: 70%;
+    color: var(--Grayish--Blue);
+}
+
+
+.card__subcontent__ofert > span{
+    font-size: 1.5rem;
+    padding-right: 0.9375rem;
+}
+
+
+
+/* PARTE DEL INPUT */
+
+
+
+.card__input{
+    margin-top: 1.25rem;
+    background-color: white;
+    padding:0.625rem;
+    border-radius: 1.875rem;
+    color: var(--Dark--Grayish--Violet);
+    display: flex;
+    align-items: center;
+}
+
+
+.card__input__text{
+    margin-left: 0.625rem;
+    width: 100%;
+}
+
+.card__content__icon__send{
+    border-radius: 50%;
+    padding: 0.3125rem;
+    width: 1.5625rem;
+    text-align: center;
+    background-color: var(--Very--Dark--Desaturated--Violet);
+    color: white;
+}
+
+
+
+/* PARTE DEL TEXTO */
+
+
+.card__content__text{
+    position: relative;
+    top: 12.5rem;
+    bottom:0;
+    left: 31.25rem;
+    width: 23.125rem;
+    height:fit-content;
+    justify-content: right;
+    text-align: left;
+}
+
+
+.card__title{
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    color: var(--Very--Dark--Desaturated--Violet);
+}
+
+
+.card__paragraf{
+    color: var(--Dark--Grayish--Violet);
+}
+
+
+
+
+
+@media (max-width:1295px) {
+    .card__object{
+        width: 18.75rem;
+    }
+
+
+    .card__content__movil{
+        left: 13.75rem;
+    }
+
+    .card__content__text{
+        left: 25rem;
+    }
+    
+}
+
+
+
+
+@media (max-width:1160px) {
+    .card__object{
+        width: 15.625rem;
+    }
+
+
+    .card__content__movil{
+        left: 10.625rem;
+    }
+
+    .card__content__text{
+        left: 18.75rem;
+    }
+}
+
+
+
+@media (max-width:1010px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .card__object{
+        height:43.75rem;
+        width: 50%;
+        border-radius:  0 0 1600px 0px;
+    }
+
+
+
+    .card__content__movil{
+        position: static;
+        margin: 0 auto;
+    }
+
+
+    .card__content__text{
+        position: static;
+        margin: 0 auto;
+        margin-top: 6.25rem;
+        text-align: center;
+    }
+    
+}
+
+
+
+@media (max-width:515px){
+    
+    .card{
+        padding: 100px 3.125rem;
+    }
+
+
+    .card__content__text{
+        position: static;
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width:468px) {
+
+    .card__content__movil{
+        width: 100%;
+    }
+    
+
+    .card__title{
+        font-size: 2rem;
+    }
+
+    .card__paragraf{
+        font-size: .9rem;
+    }
+}
